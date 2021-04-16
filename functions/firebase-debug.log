@@ -1,0 +1,143 @@
+[debug] [2020-07-14T11:19:17.838Z] ----------------------------------------------------------------------
+[debug] [2020-07-14T11:19:17.845Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Kunal Prasad\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2020-07-14T11:19:17.846Z] CLI Version:   8.4.3
+[debug] [2020-07-14T11:19:17.846Z] Platform:      win32
+[debug] [2020-07-14T11:19:17.846Z] Node Version:  v12.16.1
+[debug] [2020-07-14T11:19:17.849Z] Time:          Tue Jul 14 2020 19:19:17 GMT+0800 (Taipei Standard Time)
+[debug] [2020-07-14T11:19:17.850Z] ----------------------------------------------------------------------
+[debug] [2020-07-14T11:19:17.850Z] 
+[debug] [2020-07-14T11:19:17.874Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-07-14T11:19:17.876Z] > authorizing via signed-in user
+[debug] [2020-07-14T11:19:17.876Z] [iam] checking project glimpse-5d4d1 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2020-07-14T11:19:17.883Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/glimpse-5d4d1:testIamPermissions  
+ {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2020-07-14T11:19:19.485Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 14 Jul 2020 11:19:22 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1138","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-07-14T11:19:19.488Z] >>> HTTP REQUEST POST https://iam.googleapis.com/v1/projects/glimpse-5d4d1/serviceAccounts/glimpse-5d4d1@appspot.gserviceaccount.com:testIamPermissions  
+ {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2020-07-14T11:19:21.610Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 14 Jul 2020 11:19:24 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[warn] !  functions: package.json indicates an outdated version of firebase-functions.
+Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[info] 
+[info] === Deploying to 'glimpse-5d4d1'...
+[info] 
+[info] i  deploying functions 
+[debug] [2020-07-14T11:19:29.066Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "8"
+  },
+  "dependencies": {
+    "busboy": "^0.3.1",
+    "express": "^4.17.1",
+    "firebase": "^7.15.5",
+    "firebase-admin": "^8.10.0",
+    "firebase-functions": "^3.6.1",
+    "nodemailer": "^6.4.10"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[debug] [2020-07-14T11:19:33.292Z] [functions] runtime dependency check dates: warning: 2020-05-21T00:00:00.000Z error: 2020-07-09T00:00:00.000Z
+[warn] 
+[warn] !  functions: The Node.js 8 runtime is deprecated and will be decommissioned on 2020-12-05. For more information, see: https://firebase.google.com/support/faq#functions-runtime 
+[warn] 
+[debug] [2020-07-14T11:19:33.296Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/glimpse-5d4d1/services/cloudfunctions.googleapis.com  
+ 
+[debug] [2020-07-14T11:19:33.298Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/glimpse-5d4d1/services/runtimeconfig.googleapis.com  
+ 
+[debug] [2020-07-14T11:19:36.205Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 14 Jul 2020 11:19:38 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2020-07-14T11:19:40.947Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 14 Jul 2020 11:19:38 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-07-14T11:19:40.949Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/glimpse-5d4d1/adminSdkConfig  
+ 
+[debug] [2020-07-14T11:20:01.959Z] Error: connect ETIMEDOUT 216.58.200.138:443
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1137:16)
+[error] 
+[error] Error: Server Error. connect ETIMEDOUT 216.58.200.138:443
+[debug] [2020-07-14T11:21:02.060Z] ----------------------------------------------------------------------
+[debug] [2020-07-14T11:21:02.066Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Kunal Prasad\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2020-07-14T11:21:02.066Z] CLI Version:   8.4.3
+[debug] [2020-07-14T11:21:02.067Z] Platform:      win32
+[debug] [2020-07-14T11:21:02.067Z] Node Version:  v12.16.1
+[debug] [2020-07-14T11:21:02.069Z] Time:          Tue Jul 14 2020 19:21:02 GMT+0800 (Taipei Standard Time)
+[debug] [2020-07-14T11:21:02.069Z] ----------------------------------------------------------------------
+[debug] [2020-07-14T11:21:02.069Z] 
+[debug] [2020-07-14T11:21:02.088Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-07-14T11:21:02.090Z] > authorizing via signed-in user
+[debug] [2020-07-14T11:21:02.090Z] [iam] checking project glimpse-5d4d1 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2020-07-14T11:21:02.097Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/glimpse-5d4d1:testIamPermissions  
+ {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2020-07-14T11:21:04.096Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 14 Jul 2020 11:21:06 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1145","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-07-14T11:21:04.100Z] >>> HTTP REQUEST POST https://iam.googleapis.com/v1/projects/glimpse-5d4d1/serviceAccounts/glimpse-5d4d1@appspot.gserviceaccount.com:testIamPermissions  
+ {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2020-07-14T11:21:05.870Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 14 Jul 2020 11:21:08 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[warn] !  functions: package.json indicates an outdated version of firebase-functions.
+Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[info] 
+[info] === Deploying to 'glimpse-5d4d1'...
+[info] 
+[info] i  deploying functions 
+[debug] [2020-07-14T11:21:13.613Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "8"
+  },
+  "dependencies": {
+    "busboy": "^0.3.1",
+    "express": "^4.17.1",
+    "firebase": "^7.15.5",
+    "firebase-admin": "^8.10.0",
+    "firebase-functions": "^3.6.1",
+    "nodemailer": "^6.4.10"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[debug] [2020-07-14T11:21:18.087Z] [functions] runtime dependency check dates: warning: 2020-05-21T00:00:00.000Z error: 2020-07-09T00:00:00.000Z
+[warn] 
+[warn] !  functions: The Node.js 8 runtime is deprecated and will be decommissioned on 2020-12-05. For more information, see: https://firebase.google.com/support/faq#functions-runtime 
+[warn] 
+[debug] [2020-07-14T11:21:18.092Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/glimpse-5d4d1/services/cloudfunctions.googleapis.com  
+ 
+[debug] [2020-07-14T11:21:18.093Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/glimpse-5d4d1/services/runtimeconfig.googleapis.com  
+ 
+[debug] [2020-07-14T11:21:20.826Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 14 Jul 2020 11:21:22 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-07-14T11:21:24.639Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 14 Jul 2020 11:21:22 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2020-07-14T11:21:24.642Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/glimpse-5d4d1/adminSdkConfig  
+ 
+[debug] [2020-07-14T11:21:25.357Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 14 Jul 2020 11:21:28 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  functions: preparing functions directory for uploading... 
+[debug] [2020-07-14T11:21:25.361Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/glimpse-5d4d1/configs  
+ 
+[debug] [2020-07-14T11:21:27.309Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 14 Jul 2020 11:21:30 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  functions: packaged functions (41.16 KB) for uploading 
+[debug] [2020-07-14T11:21:29.053Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/projects/glimpse-5d4d1/locations/-/functions  
+ 
+[debug] [2020-07-14T11:21:50.283Z] [functions] failed to list functions for glimpse-5d4d1
+[debug] [2020-07-14T11:21:50.283Z] [functions] Server Error. connect ETIMEDOUT 216.58.200.138:443
+[debug] [2020-07-14T11:21:50.286Z] 
+[error] 
+[error] Error: An unexpected error has occurred.

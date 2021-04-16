@@ -1,0 +1,182 @@
+<html>
+  <head>
+    <style>
+      body {
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-top: 2%;
+        padding-bottom: 5%;
+        font-family: "Open Sans", sans-serif;
+        line-height: 1.25;
+      }
+
+      table {
+        border: 1px solid #ccc;
+        border-collapse: collapse;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        table-layout: fixed;
+      }
+
+      table caption {
+        font-size: 1.5em;
+        margin: 0.5em 0 0.75em;
+      }
+
+      table tr {
+        background-color: #f8f8f8;
+        border: 1px solid #ddd;
+        padding: 0.35em;
+      }
+
+      table th,
+      table td {
+        padding: 0.625em;
+        text-align: center;
+      }
+
+      table th {
+        font-size: 0.85em;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+      .subheading {
+        color: #888888;
+      }
+      hr {
+        color: #777777;
+      }
+      h1 {
+        color: #222831;
+        word-spacing: 1.5em;
+        font-size: 2.4em;
+      }
+      a {
+        text-decoration: none;
+        font-style: italic;
+        color: black;
+      }
+      .Signature {
+        padding: 10px;
+        font-size: larger;
+        line-height: 120%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      <strong><center>Glimpse</center></strong>
+    </h1>
+    <br />
+    <h2>You've got a response!</h2>
+    <small>Requested at: <b>${new Date().toString()}</b></small>
+    <p class="subheading">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+      eiusmodati mat tempor incididunt ut labore et dolore magna aliqua
+    </p>
+    <br />
+    <hr />
+    <br />
+    <table>
+      <caption>
+        University Information
+      </caption>
+      <tbody>
+        <tr>
+          <td>Name</td>
+          <td>${userDetails.name}</td>
+        </tr>
+        <tr>
+          <td>Email Address</td>
+          <td>${userDetails.email}</td>
+        </tr>
+        <tr>
+          <td>Scheduled Meeting Date</td>
+          <td>${req.body.scheduledMeeting}</td>
+        </tr>
+        <tr>
+          <td>Preferred Dates</td>
+          <td>${req.body.preferredDates}</td>
+        </tr>
+        <tr>
+          <td>No. of Students</td>
+          <td>${req.body.numberOfStudents}</td>
+        </tr>
+        <tr>
+          <td>Address</td>
+          <td>${userDetails.locationStreetAddress}</td>
+        </tr>
+        <tr>
+          <td>City</td>
+          <td>${userDetails.locationCity}</td>
+        </tr>
+        <tr>
+          <td>State</td>
+          <td>${userDetails.locationState}</td>
+        </tr>
+        <tr>
+          <td>Country</td>
+          <td>${userDetails.locationCountry}</td>
+        </tr>
+        <tr>
+          <td>Zip Code</td>
+          <td>${userDetails.zipcode}</td>
+        </tr>
+        <tr>
+          <td>Website</td>
+          <td>
+            <a href="${userDetails.website}" target="_blank"
+              >${userDetails.name}</a
+            >
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br />
+    <br />
+    <hr />
+    <br />
+    <table>
+      <caption>
+        Industry Information
+      </caption>
+      <tbody>
+        <tr>
+          <td>Title</td>
+          <td>${postDetails.title}</td>
+        </tr>
+        <tr>
+          <td>Industry</td>
+          <td>${postDetails.industry}</td>
+        </tr>
+        <tr>
+          <td>Location</td>
+          <td>${postDetails.location}</td>
+        </tr>
+        <tr>
+          <td>Preferred For</td>
+          <td>${postDetails.preferredFor}</td>
+        </tr>
+        <tr>
+          <td>Description</td>
+          <td>${postDetails.description}</td>
+        </tr>
+        <tr>
+          <td>Post ID</td>
+          <td>
+            <a href="`${req.params.postId}`" target="_blank"
+              >${req.params.postId}</a
+            >
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="Signature">
+      <br /><br /><small
+        >Warm Regards,<br />Glimpse Development Team<br />${new
+        Date().toDateString()}<b></b
+      ></small>
+    </div>
+  </body>
+</html>
